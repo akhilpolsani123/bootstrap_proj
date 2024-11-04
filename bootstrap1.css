@@ -1,0 +1,183 @@
+:root {
+    --sidebar-width: 280px;
+    --primary-color: #6366f1;
+    --secondary-color: #818cf8;
+    --dark-bg: #1e293b;
+    --card-border-radius: 16px;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+}
+
+body {
+    background-color: #f1f5f9;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--dark-bg);
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.sidebar .nav-link {
+    color: #94a3b8;
+    padding: 0.875rem 1rem;
+    margin: 0.3rem 0;
+    border-radius: 12px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    margin-right: 12px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+/* Card Styles */
+.dashboard-card {
+    background: #ffffff;
+    border-radius: var(--card-border-radius);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.balance-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+/* Transaction Styles */
+.transaction-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-item:hover {
+    background-color: #f8fafc;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+/* Progress Circle */
+.progress-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.progress-circle::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+.progress-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+/* Utility Classes */
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-danger {
+    color: var(--danger-color) !important;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Card Headers */
+.card-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card-header-custom h5 {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Links */
+.link-custom {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.link-custom:hover {
+    color: var(--secondary-color);
+}
+
+/* Amount Labels */
+.amount-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Category Labels */
+.category-label {
+    color: #64748b;
+    font-size: 0.95rem;
+}

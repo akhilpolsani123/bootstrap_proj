@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap1.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-white mb-4 fw-bold">Finance</h4>
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="#">
+                <i class="fas fa-home"></i> Overview
+            </a>
+            <a class="nav-link" href="#">
+                <i class="fas fa-exchange-alt"></i> Transactions
+            </a>
+            <a class="nav-link" href="#">
+                <i class="fas fa-chart-pie"></i> Budgets
+            </a>
+            <a class="nav-link" href="#">
+                <i class="fas fa-wallet"></i> Pots
+            </a>
+            <a class="nav-link" href="#">
+                <i class="fas fa-receipt"></i> Recurring Bills
+            </a>
+        </nav>
+        <div class="mt-auto" style="position: absolute; bottom: 20px; width: calc(100% - 3rem);">
+            <a class="nav-link" href="#">
+                <i class="fas fa-bars"></i> Minimize Menu
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="mb-4 fw-bold">Overview</h2>
+
+        <!-- Balance Cards -->
+        <div class="row mb-4 g-4">
+            <div class="col-md-4">
+                <div class="dashboard-card balance-card p-4">
+                    <div class="text-white-50 small mb-1">Current Balance</div>
+                    <div class="h3 mb-0 fw-bold">$4,836.00</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="dashboard-card p-4">
+                    <div class="text-muted small mb-1">Income</div>
+                    <div class="h3 mb-0 fw-bold text-success">$3,814.25</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="dashboard-card p-4">
+                    <div class="text-muted small mb-1">Expenses</div>
+                    <div class="h3 mb-0 fw-bold text-danger">$1,700.50</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pots and Budgets -->
+        <div class="row mb-4 g-4">
+            <!-- Pots -->
+            <div class="col-md-6">
+                <div class="dashboard-card">
+                    <div class="card-header-custom">
+                        <h5 class="mb-0">Pots</h5>
+                        <a href="#" class="link-custom">
+                            See Details <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div>
+                                    <div class="text-muted small">Total Saved</div>
+                                    <div class="h4 mb-0 fw-bold">$850</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-label">Savings</span>
+                            <span class="amount-label">$159</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-label">Concert Ticket</span>
+                            <span class="amount-label">$110</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-label">Gift</span>
+                            <span class="amount-label">$40</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="category-label">New Laptop</span>
+                            <span class="amount-label">$10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budgets -->
+            <div class="col-md-6">
+                <div class="dashboard-card">
+                    <div class="card-header-custom">
+                        <h5 class="mb-0">Budgets</h5>
+                        <a href="#" class="link-custom">
+                            See Details <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <div class="progress-circle mb-4">
+                            <div class="progress-info">
+                                <div class="h3 mb-0 fw-bold">$338</div>
+                                <div class="text-muted small">of $975 limit</div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-label">Entertainment</span>
+                            <span class="amount-label">$50.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-label">Bills</span>
+                            <span class="amount-label">$750.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="category-label">Dining Out</span>
+                            <span class="amount-label">$75.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="category-label">Personal Care</span>
+                            <span class="amount-label">$100.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transactions -->
+        <div class="dashboard-card">
+            <div class="card-header-custom">
+                <h5 class="mb-0">Transactions</h5>
+                <a href="#" class="link-custom">
+                    View All <i class="fas fa-chevron-right ms-2"></i>
+                </a>
+            </div>
+            <div class="p-4">
+                <div class="transaction-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="/api/placeholder/40/40" class="rounded" alt="Emma">
+                        <div>
+                            <div class="fw-medium">Emma Richardson</div>
+                            <div class="text-muted small">19 Aug 2024</div>
+                        </div>
+                    </div>
+                    <div class="text-success fw-semibold">+$75.50</div>
+                </div>
+                <div class="transaction-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div>
+                            <div class="fw-medium">Savory Bites Bistro</div>
+                            <div class="text-muted small">19 Aug 2024</div>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-semibold">-$55.50</div>
+                </div>
+                <div class="transaction-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="/api/placeholder/40/40" class="rounded" alt="Daniel">
+                        <div>
+                            <div class="fw-medium">Daniel Carter</div>
+                            <div class="text-muted small">18 Aug 2024</div>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-semibold">-$42.30</div>
+                </div>
+                <div class="transaction-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="/api/placeholder/40/40" class="rounded" alt="Sun">
+                        <div>
+                            <div class="fw-medium">Sun Park</div>
+                            <div class="text-muted small">17 Aug 2024</div>
+                        </div>
+                    </div>
+                    <div class="text-success fw-semibold">+$120.00</div>
+                </div>
+                <div class="transaction-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div>
+                            <div class="fw-medium">Urban Services Hub</div>
+                            <div class="text-muted small">17 Aug 2024</div>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-semibold">-$65.00</div>
+                </div>
+            </div>
